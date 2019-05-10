@@ -19,7 +19,11 @@
 		<div class="quote-item">
 			<div><span>Author:</span> <?php echo $quote['author']['name']; ?></div>
 			<div><span>Quote:</span><p> <?php echo $quote['body']; ?></div>
-			<div class="operations"><ul><li><a href="#">edit</a></li><li><a href="#">delete</a></li></ul></div>
+			<div class="operations">
+				<ul>
+					<li><a href="<?php echo add_query_arg(array('quote' => $quote['id'], 'action' => 'edit', 'page' => 'quotes_rest_manage')); ?>">edit</a></li>
+					<li><a href="<?php echo add_query_arg(array('quote' => $quote['id'], 'action' => 'delete', 'page' => 'quotes_rest_manage')); ?>">delete</a></li>
+				</ul></div>
 		</div>
 	<?php endforeach; ?>
  	</div>

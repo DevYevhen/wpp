@@ -9,7 +9,9 @@ class CRUD_Menu {
  
     public function init() {
          add_action( 'admin_menu', array( $this, 'add_options_page' ) );
-    }
+	}
+
+
  
     public function add_options_page() {
  
